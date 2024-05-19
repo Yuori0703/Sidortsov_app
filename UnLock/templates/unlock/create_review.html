@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+{% block title %} оставить отзыв {% endblock title %}
+{% block content %}
+<h1>Оставить отзыв</h1>
+  <form method="GET" action="{% url 'create_review' %}">
+    {{ form.as_p }}
+    <button type="submit">Далее</button>
+  </form>
+
+{% endblock %}

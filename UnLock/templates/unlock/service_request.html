@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <h1 class="formcol">Запрос на услугу</h1>
+  <div class="mb-3">
+  <form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Рассчитать цену</button>
+  </form>
+  {% if service_price %}
+    <p>Стоимость услуги: {{ service_price }} </p>
+  {% endif %}
+  {% if distance_price %}
+    <p>Стоимость за километр: {{ distance_price }} </p>
+  {% endif %}
+  {% if total_price %}
+    <p>Общая цена: {{ total_price }} </p>
+  {% endif %}
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,31 @@
+{% extends 'base_generic.html' %}
+{% block title %} вскрытие дверных замков {% endblock title %}
+{% block content %}
+<h1 style="text-align: center;">Вскрытие дверных замков </h1>
+<div class="cont1" style="background-color: aqua">
+{% include 'include/table1.html' %}
+    {% for lock in object_list   %}
+    {% if lock.lock_object == "door_lock" and lock.service == "hacking"  %}
+    {% include 'include/table2.html' %}
+    {% endif %}
+    {% endfor %}
+  </table>
+  <h3 style="text-align: center;">Ремонт</h3>
+  {% include 'include/table1.html' %}
+    {% for lock in object_list   %}
+
+    {% if lock.lock_object == "door_lock" and lock.service == "repair"  %}
+    {% include 'include/table2.html' %}
+    {% endif %}
+    {% endfor %}
+  </table>
+  <h3 style="text-align: center;">Дополнительные услуги</h3>
+  {% include 'include/table1.html' %}
+    {% for lock in object_list   %}
+    {% if lock.lock_object == "door_lock" and lock.service == "repair_dop"  %}
+    {% include 'include/table2.html' %}
+    {% endif %}
+    {% endfor %}
+  </table>
+</div>
+{% endblock  %}

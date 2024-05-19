@@ -1,0 +1,31 @@
+{% extends 'base_generic.html' %}
+{% block title %} ремонт {% endblock title %}
+{% block content %}
+<h1 style="text-align: center">Ремонт замков квартир, авто, гаражей</h1>
+<div class="cont1" style="background-color: aqua">
+<h3 style="text-align: center;">Ремонт дверных замков</h3>
+{% include 'include/table1.html' %}
+{% for lock in object_list %}
+{% if lock.lock_object == "door_lock" and lock.service == "repair_dop"  %}
+{% include 'include/table2.html' %}
+  {% endif %}
+  {% endfor %}
+</table>
+  <h3 style="text-align: center;">Ремонт замков автомобиля</h3>
+{% include 'include/table1.html' %}
+{% for lock in object_list %}
+{% if lock.lock_object == "car" and lock.service == "repair"  %}
+{% include 'include/table2.html' %}
+  {% endif %}
+  {% endfor %}
+</table>
+<h3 style="text-align: center;">Ремонт замков</h3>
+{% include 'include/table1.html' %}
+{% for lock in object_list %}
+{% if lock.lock_object == "door_lock" and lock.service == "repair"  %}
+{% include 'include/table2.html' %}
+  {% endif %}
+  {% endfor %}
+</table>
+</div>
+{% endblock %}

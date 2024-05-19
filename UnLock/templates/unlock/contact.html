@@ -1,0 +1,97 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block content %}
+
+<div class="contact-details text-center text-lg-start" style="background-color: #e44d4d ">
+    <h2 class="needed-docs-header">Контакты</h2>
+    <div class="header-stroke">
+        <img class="black-stroke" src="https://badlock.ru/images/icons/header_line_black.svg" alt="Line">
+    </div>
+    <div class="contact-block">
+        <div class="row align-items-center">
+            <div class="col-4 col-lg-2 text-end">
+                <img class="img-fluid" src="https://badlock.ru/images/icons/white_email.svg" alt="Email мастера по вскрытию замков">
+            </div>
+            <div class="col-8 col-lg-10 text-start d-lg-flex align-items-center">
+                <a href="mailto:master@badlock.ru">LockGenius@mail.ru</a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-4 col-lg-2 text-end">
+                <img class="img-fluid" src="https://badlock.ru/images/icons/white_phone.svg" alt="Телефон мастера по вскрытию замков">
+            </div>
+            <div class="col-8 col-lg-10 text-start d-lg-flex align-items-center">
+                <div class="contact-phone">
+                    <a href="tel:375331394946">+375 33 139-49-46</a><br>
+                    <div class="around_clock">круглосуточно</div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-4 col-lg-2 text-end">
+                <img class="img-fluid" src="https://badlock.ru/images/icons/white_wp.svg" alt="Whatsapp мастера">
+            </div>
+            <div class="col-8 col-lg-10 text-start d-lg-flex align-items-center">
+                <div class="contact-phone"><a target="_blank" href="https://wa.me/9111394946">+375 33 139-49-46</a></div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-4 col-lg-2 text-end">
+                <img class="img-fluid" src="https://badlock.ru/images/icons/white_telegram.svg" alt="Телеграм мастера">
+            </div>
+            <div class="col-8 col-lg-10 text-start d-lg-flex align-items-center">
+                <div class="contact-phone"><a target="_blank" href="https://t.me/LockGenius">Напишите нам!</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/map.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+<div class="bottom-wrapper" style="background-color: #292734;>
+    <div class="container custom-container">
+        <div class="row">
+            <div class="col-12 col-lg-3 text-center">
+                {% include 'include/main_icons.html' %}
+            </div>
+            <div class="col-12 col-lg-7 d-lg-flex text-center">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="collapse navbar-collapse text-center " id="bottom-navbar">
+                    </div>
+                </nav>
+            </div>
+            <div class="col-12 col-lg-2 text-center text-lg-start" >
+                <div class="bottom-phone">
+                    <div class="col-12">
+                        <img class="img-fluid" src="https://badlock.ru/images/icons/bottom_red_phone.svg" alt="Телефон"> <span><a href="tel:79111394946">телефон</a></span><br>
+                        <div class="around_clock_bottom">круглосуточно</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <img class="img-fluid" src="https://badlock.ru/images/icons/bottom_red_email.svg" alt="Email"> <span><a href="mailto:master@badlock.ru">LockGenius@mail.ru</a></span><br>
+                    </div>
+                </div>
+
+                <div class="bottom-messengers mt-4" ">
+                    <div class="row gx-2">
+                        <div class="col-3 d-block d-lg-none"></div>
+                        <div class="col-2 col-lg-4">
+                            <a target="_blank" href="https://wa.me/LockGenius"><img class="img-fluid" src="https://badlock.ru/images/icons/bottom_wp.svg" alt="Whatsapp"></a>
+                        </div>
+                        <div class="col-2 col-lg-4">
+                            <a target="_blank" href="https://t.me/LockGenius"><img class="img-fluid" src="https://badlock.ru/images/icons/bottom_telegram.svg" alt="Телеграм"></a>
+                        </div>
+                        <div class="col-2 col-lg-4">
+                            <a target="_blank" href="https://vk.com/LockGenius"><img class="img-fluid" src="https://badlock.ru/images/icons/bottom_vk.svg" alt="Vkontake"></a>
+                        </div>
+                        <div class="col-3 d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2>Свяжитесь с нами</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Отправить</button>
+</form>
+{% endblock %}

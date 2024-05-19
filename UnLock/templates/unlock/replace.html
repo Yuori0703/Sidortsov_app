@@ -1,0 +1,14 @@
+{% extends 'base_generic.html' %}
+{% block title %} замена замков {% endblock title %}
+{% block content %}
+<h1 style="text-align: center">замена замков</h1>
+<div class="cont1" style="background-color: aqua">
+{% include 'include/table1.html' %}
+{% for lock in object_list %}
+{% if lock.service == "replace" %}
+{% include 'include/table2.html' %}
+{% endif %}
+{% endfor %}
+</table>
+</div>
+{% endblock %}

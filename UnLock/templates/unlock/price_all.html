@@ -1,0 +1,47 @@
+{% extends 'base_generic.html' %}
+{% block title %} цены на вскрытие {% endblock title %}
+{% block content %}
+<h1 style="text-align: center">Наши цены</h1>
+<div class="cont1" style="background-color: aqua">
+<h3 style="text-align: center;">Авто</h3>
+{% include 'include/table1.html' %}
+		{% for lock in object_list %}
+        {% if lock.lock_object == 'car' %}
+		{% include 'include/table2.html' %}
+{% endif %}
+     {% endfor %}
+</table>
+<h3 style="text-align: center;">Услуги по вскрытию сейфов</h3>
+  {% include 'include/table1.html' %}
+    {% for lock in object_list   %}
+    {% if lock.lock_object == "safe"   %}
+    {% include 'include/table2.html' %}
+    {% endif %}
+    {% endfor %}
+  </table>
+  <h3 style="text-align: center;">Услуги по вскрытию дверей</h3>
+  {% include 'include/table1.html' %}
+    {% for lock in object_list   %}
+    {% if lock.lock_object == "door"   %}
+    {% include 'include/table2.html' %}
+    {% endif %}
+    {% endfor %}
+  </table>
+  <h3 style="text-align: center;">Услуги по вскрытию гаражей</h3>
+  {% include 'include/table1.html' %}
+    {% for lock in object_list   %}
+    {% if lock.lock_object == "garage"   %}
+    {% include 'include/table2.html' %}
+    {% endif %}
+    {% endfor %}
+  </table>
+    <h3 style="text-align: center;">Услуги по вскрытию замков</h3>
+    {% include 'include/table1.html' %}
+      {% for lock in object_list   %}
+      {% if lock.lock_object == "door"   %}
+      {% include 'include/table2.html' %}
+      {% endif %}
+      {% endfor %}
+  </table>
+</div>
+	{% endblock %}

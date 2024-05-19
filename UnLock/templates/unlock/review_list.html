@@ -1,0 +1,39 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Отзывы</h1>
+{% for review in object_list %}
+  <div>
+    <h2>{{ review.lock_object }}</h2>
+    <p>Автор отзыва: {{ review.user.username }}</p>
+    <p>Коментарий: {{ review.comment }}</p>
+    <p>Рейтинг: {{ review.rating }}</p>
+    <div class="rating">
+      {% for star in "12345" %}
+        {% if star <= review.avg_rating %}
+          <span class="fa fa-star checked"></span>
+        {% else %}
+          <span class="fa fa-star"></span>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% empty %}
+  <p>Нет отзывов.</p>
+{% endfor %}
+  <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">« первая</a>
+            <a href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">следующая</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">последняя »</a>
+        {% endif %}
+    </span>
+  </div>
+{% endblock %}

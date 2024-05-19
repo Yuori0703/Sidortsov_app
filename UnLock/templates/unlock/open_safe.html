@@ -1,0 +1,13 @@
+{% extends 'base_generic.html' %}
+{% block title %} вскрытие сейфов {% endblock title %}
+{% block content %}
+<h1 style="text-align: center">Вскрытие сейфов</h1>
+<div class="cont1" style="background-color: aqua">
+{% include 'include/table1.html' %}
+		{% for lock in object_list %}
+    {% if lock.lock_object == "safe" and lock.service == "open_lock" %}
+		{% include 'include/table2.html' %}
+  {% endif %} {% endfor %}
+</table>
+</div>
+	{% endblock %}

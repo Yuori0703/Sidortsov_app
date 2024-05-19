@@ -1,0 +1,118 @@
+{% extends 'base_generic.html' %}
+
+{% load static %}
+  {% block content %}
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/door_open.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                <div class="card-body">
+                  <p class="card-text" _msttexthash="140563280" _msthash="21">Если у вас не открывается дверь обратитесь к нам</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'door'  %}">Вскрытие дверей</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                  <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/lock_open.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                  <div class="card-body">
+                    <p class="card-text" _msttexthash="140563280" _msthash="21">Если у вас не открывается замок обратитесь к нам</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'lock'  %}">Вскрытие замков</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/safe_open.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                  <div class="card-body">
+                    <p class="card-text" _msttexthash="140563280" _msthash="21">Если у вас не открывается сейф обратитесь к нам</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'safe'  %}">Вскрытие сейфов</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/car_open.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                  <div class="card-body">
+                    <p class="card-text" _msttexthash="140563280" _msthash="21">Если у вас не открывается автомобиль обратитесь к нам</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'car'  %}">Вскрытие автомобилей</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/garage_open.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                  <div class="card-body">
+                    <p class="card-text" _msttexthash="140563280" _msthash="21">Если у вас не открывается гараж обратитесь к нам</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'garage'  %}">Вскрытие гаражей</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/replace.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                  <div class="card-body">
+                    <p class="card-text" _msttexthash="140563280" _msthash="21">Вам необходимо заменить замок обратитесь к нам</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'replace'  %}">Замена замков</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                  <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/installation.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                  <div class="card-body">
+                    <p class="card-text" _msttexthash="140563280" _msthash="21">Если вам необходимо установить замок обратитесь к нам</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'installation'  %}">Установка замков</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="img-fluid img-thumbnail" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" src="{% static 'img/repair.jpg' %}" preserveAspectRatio="xMidYMid slice" focusable="false" _mstaria-label="470535" _mstHash="18" >
+                  <div class="card-body">
+                    <p class="card-text" _msttexthash="140563280" _msthash="21">Если необходимо отремонтировать замок обратитесь к нам</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="333034" _msthash="22"><a href="{% url 'repair'  %}">Ремонт замков</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  {% include 'include/users.html' %}
+  {% endblock %}
+

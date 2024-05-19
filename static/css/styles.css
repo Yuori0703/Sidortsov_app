@@ -1,0 +1,40 @@
+.icons {
+    margin-right: auto;
+
+}
+
+.base {
+    background-color: indianred;
+    height: min-content;
+
+}
+
+.carousel {
+    margin-top: auto;
+}
+
+.col {
+    background-color: #cd5c5c;
+}
+
+body {
+    background-color: #cd5c5c;
+}
+
+.footer1 {
+    background-color:#cd5c5c;
+}
+
+
+.nav1 {
+    background-color: #cd5c5c;
+}
+
+.card-body {
+    background-color:#cd5c5c;
+}
+
+.album py-5 bg-body-tertiary {
+    background-color:#cd5c5c;
+}
+
